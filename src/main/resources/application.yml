@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: Scheduler
+
+schedule:
+  transaction:
+    time: 0 26 5 ? * MON-FRI
+
+server:
+  port: 8081
+
+---
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles:
+    active: sit
+
+---
+spring:
+  profiles:
+    active: uat
+
+---
+spring:
+  profiles:
+    active: prod
